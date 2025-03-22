@@ -1,0 +1,39 @@
+.overlay {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  right: 20%; /* Adjust this as needed */
+}
+
+.about-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 20%; /* Adjust this too */
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
