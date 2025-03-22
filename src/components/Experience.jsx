@@ -2,16 +2,10 @@ import { useLoader, useThree } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { useEffect } from "react";
 import { OrbitControls, Environment, SoftShadows } from "@react-three/drei";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import Building from "./bulding";
 
 export default function Experience() {
-  const backgroundTexture = useLoader(TextureLoader, "/space.jpg");
-  const { scene } = useThree();
-
-  useEffect(() => {
-    scene.background = backgroundTexture;
-  }, [scene, backgroundTexture]);
-
   return (
     <>
       <color attach="background" args={["#000"]} />
@@ -26,6 +20,13 @@ export default function Experience() {
         minPolarAngle={Math.PI / 3}
         maxPolarAngle={Math.PI / 2}
       />
+      <EffectComposer>
+        <Bloom
+          luminanceThreshold={0.2}
+          luminanceSmoothing={0.9}
+          intensity={1} // play with this
+        />
+      </EffectComposer>
       <Building />
     </>
   );

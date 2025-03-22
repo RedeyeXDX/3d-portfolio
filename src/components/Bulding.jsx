@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export default function Building() {
-  const { scene } = useGLTF("/models/Food Apartement.glb", true);
+  const { scene } = useGLTF("/models/Food Apartement2.glb", true);
 
   scene.traverse((child) => {
     if (child.isMesh) {
